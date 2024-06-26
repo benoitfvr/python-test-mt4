@@ -12,4 +12,11 @@ def test_calculate_multiplication():
 
 def test_calculate_complex_expression():
     assert calculate("3 5 8 * 7 + *") == 141
+    
+def test_calculate_invalid_expression():
+    with pytest.raises(IndexError):
+        calculate("4 +")
 
+def test_calculate_non_integer():
+    with pytest.raises(ValueError):
+        calculate("4 a +")
