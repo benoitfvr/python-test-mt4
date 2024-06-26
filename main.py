@@ -1,6 +1,10 @@
 def calculate(expression):
     stack = []
-    operators = {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y}
+    operators = {
+        '+': lambda x, y: x + y,
+        '-': lambda x, y: x - y,
+        '*': lambda x, y: x * y
+    }
 
     operands = expression.split()
     for operand in operands:
